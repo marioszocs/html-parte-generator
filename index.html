@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Template Generator</h1>
+        <form id="dataForm">
+            <label for="religion">Religion:</label>
+            <select id="religion" name="religion" required>
+                <option value="christian">Christian</option>
+                <option value="non-christian">Non-Christian</option>
+            </select>
+            
+            <label for="language">Language:</label>
+            <select id="language" name="language" required>
+                <option value="sk">Slovak</option>
+                <option value="hu">Hungarian</option>
+            </select>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="birthName">Birth Name:</label>
+            <input type="text" id="birthName" name="birthName" required>
+            
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+            
+            <label for="facebookConsent">
+                <input type="checkbox" id="facebookConsent" name="facebookConsent">
+                I agree to upload the PDF to Facebook
+            </label>
+            
+            <button type="submit">Generate Template</button>
+        </form>
+
+        <div id="templates" style="display:none;">
+            <h2>Choose a Template</h2>
+            <a href="#" id="template1" class="template">Template 1</a>
+            <a href="#" id="template2" class="template">Template 2</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
