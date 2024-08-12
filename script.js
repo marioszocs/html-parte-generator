@@ -4,27 +4,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        const religion = document.getElementById('religion').value;
+        const placeOfService = document.getElementById('placeOfService').value;
         const language = document.getElementById('language').value;
+        const religion = document.getElementById('religion').value;
+        const gender = document.getElementById('gender').value;
+        const mass = document.getElementById('mass').value;
         const firstName = document.getElementById('firstName').value;
         const lastName = document.getElementById('lastName').value;
         const birthName = document.getElementById('birthName').value;
+        const age = document.getElementById('age').value;
+        const deathDate = document.getElementById('deathDate').value;
+        const funeralDate = document.getElementById('funeralDate').value;
+        const funeralTime = document.getElementById('funeralTime').value;
+        const locationOfFuneral = document.getElementById('locationOfFuneral').value;
         const imageFile = document.getElementById('image').files[0];
-        const facebookConsent = document.getElementById('facebookConsent').checked;
 
         if (imageFile) {
             const reader = new FileReader();
             reader.onload = function (e) {
                 const imageUrl = e.target.result;
                 const urlParams = new URLSearchParams({
-                    religion, language, firstName, lastName, birthName, imageUrl, facebookConsent
+                    placeOfService, language, religion, gender, mass, firstName, lastName, birthName, age, deathDate, funeralDate, funeralTime,locationOfFuneral, imageUrl
                 }).toString();
                 setTemplateLinks(urlParams);
             };
             reader.readAsDataURL(imageFile);
         } else {
             const urlParams = new URLSearchParams({
-                religion, language, firstName, lastName, birthName, facebookConsent
+                placeOfService, language, religion, gender, mass, firstName, lastName, birthName, age, deathDate, funeralDate, funeralTime,locationOfFuneral
             }).toString();
             setTemplateLinks(urlParams);
         }
@@ -32,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function setTemplateLinks(urlParams) {
         templates.style.display = 'block';
-        document.getElementById('template1').href = `template1.html?${urlParams}`;
-        document.getElementById('template2').href = `template2.html?${urlParams}`;
+        document.getElementById('parteSkMuzKrizom1').href = `parteSK/parteSK.html?${urlParams}`;
+        //document.getElementById('parteHU').href = `parteHU/parteHU01.html?${urlParams}`;
     }
 });

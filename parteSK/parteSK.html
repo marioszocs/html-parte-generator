@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parteSkMuzKrizom1</title>
+    <link rel="stylesheet" href="parteSK.css">
+</head>
+
+<body>
+    <header>
+        <button class="generate-button" id="generatePdf">Vygenerovať PDF</button>
+    </header>
+
+
+    <div class="template-container" id="parteSkMuzKrizom1Content">
+        <br>
+
+        <div class="mourning-verse">
+            <p> "Neplačte, že som odišiel <br>
+                Len pokoj mi prajte, <br>
+                A v srdci večnú spomienku <br>
+                Si na mňa zachovajte." <br>
+            </p>
+        </div>
+
+
+        <div class="cross">
+            <img src="/pictures/cross.jpeg" alt="cross" height="200">
+        </div>
+
+        <div class="user-image">
+            <img id="userImage" src="" alt="User Image" style="display:none;" width="200">
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <p> S hlbokým žiaľom oznamujeme všetkým príbuzným, <br>
+                priateľom a známym, že dňa <span id="deathDateId"></span> nás vo veku <span id="ageId"></span> rokov
+                <br> navždy <span id="genderId"></span> <br>
+            </p>
+        </div>
+
+        <br>
+
+        <h2> <span id="firstNameId"></span> <span id="lastNameId"></span> </h2>
+
+        <span id="birthNameId"></span>
+
+        <div>
+            <p>Posledná rozlúčka s <span id="ourDearDepartedId"></span> <br> bude <span id="funeralDateId"></span> o
+                <span id="funeralTimeId"></span> hod.
+                <br> v <span id="locationOfFuneralId"></span> <span id="massId"></span>.
+            </p>
+            <br>
+            <p>Smútiaca rodina.</p>
+        </div>
+
+        <br>
+
+
+        <div class="bottom-logo">
+            <p>
+                <img src="/pictures/logo.jpg" alt="logo" width="190"> <br>
+                Zuzana Bogdányová, tel. 0905 897 106 <br>
+                <span id="placeOfServiceId"></span>
+            </p>
+        </div>
+
+        <div class="bottom-flower">
+            <img src="/pictures/flower.jpg" alt="flower" height="345">
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="parteSK.js"></script>
+</body>
+
+</html>

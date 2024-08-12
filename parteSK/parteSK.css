@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.template-container {
+    height: 247mm;
+    text-align: center;
+    border-style: double;
+    border-width: 5px;
+}
+
+
+.user-image {
+    position: absolute;
+    top: 9%;
+    left: 40%;
+}
+
+.mourning-verse {
+    text-align: left;
+    margin: 50px;
+}
+
+.cross {
+    position: absolute;
+    top: 5%;
+    left: 78%;
+}
+
+.bottom-logo {
+    position: absolute;
+    top: 82%;
+    right: 59%;
+}
+
+.bottom-flower {
+    position: absolute;
+    top: 60%;
+    right: 10px;
+}
+
+.generate-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.generate-button:hover {
+    background-color: #555555;
+    color: white;
+}

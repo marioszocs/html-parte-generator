@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +8,85 @@
 </head>
 <body>
     <div class="container">
-        <h1>Template Generator</h1>
+        <h1>Parte generátor</h1>
         <form id="dataForm">
-            <label for="religion">Religion:</label>
-            <select id="religion" name="religion" required>
-                <option value="christian">Christian</option>
-                <option value="non-christian">Non-Christian</option>
-            </select>
             
-            <label for="language">Language:</label>
-            <select id="language" name="language" required>
-                <option value="sk">Slovak</option>
-                <option value="hu">Hungarian</option>
+            <label for="placeOfService">Miesto prevádzky:</label>
+            <select id="placeOfService" name="placeOfService" required>
+                <option value="tvrdosovce">Tvrdošovce</option>
+                <option value="sala">Šala</option>
             </select>
 
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <label for="language">V akom jazyku bude parte:</label>
+            <select id="language" name="language" required>
+                <option value="sk">slovenský</option>
+                <option value="hu">maďarský</option>
+            </select>
             
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <label for="religion">Parte bude:</label>
+            <select id="religion" name="religion" required>
+                <option value="christian">s krížom</option>
+                <option value="non-christian">bez kríža</option>
+            </select>
+
+            <label for="gender">Pohlavie:</label>
+            <select id="gender" name="gender" required>
+                <option value="man">muž</option>
+                <option value="woman">žena</option>
+            </select>
             
-            <label for="birthName">Birth Name:</label>
-            <input type="text" id="birthName" name="birthName" required>
+            <label for="mass">Omša:</label>
+            <select id="mass" name="mass" required>
+                <option value="yes">áno</option>
+                <option value="no">nie</option>
+            </select>
             
+
+            <label for="firstName">Meno:</label>
+            <input type="text" id="firstName" name="firstName">
+            
+            <label for="lastName">Priezvisko:</label>
+            <input type="text" id="lastName" name="lastName">
+            
+            <label for="birthName">Rodné priezvisko:</label>
+            <input type="text" id="birthName" name="birthName">
+
+            <label for="age">Vek:</label>
+            <input type="number" id="age" name="age" max="110">
+            
+            <label for="deathDate">Dátum úmrtia:</label>
+            <input type="date" id="deathDate" name="deathDate" >
+            
+            <label for="funeralDate">Deň pohrebu:</label>
+            <input type="date" id="funeralDate" name="funeralDate">
+            
+            <label for="funeralTime">Čas pohrebu:</label>
+            <input type="time" id="funeralTime" name="funeralTime">
+            
+            
+            <label for="locationOfFuneral">Miesto pohrebu:</label>
+            <input type="text" id="locationOfFuneral" name="locationOfFuneral">
+
+
             <label for="image">Image:</label>
             <input type="file" id="image" name="image" accept="image/*">
             
-            <label for="facebookConsent">
+            <!-- <label for="facebookConsent">
                 <input type="checkbox" id="facebookConsent" name="facebookConsent">
                 I agree to upload the PDF to Facebook
-            </label>
+            </label> -->
             
-            <button type="submit">Generate Template</button>
+            <button type="submit">Generovať parte</button>
         </form>
 
         <div id="templates" style="display:none;">
-            <h2>Choose a Template</h2>
-            <a href="#" id="template1" class="template">Template 1</a>
-            <a href="#" id="template2" class="template">Template 2</a>
+            <h2>Vyberte si parte</h2>
+            <a href="#" id="parteSkMuzKrizom1" class="template">Parte SK</a>
+            <a href="#" id="parteHuKrizom1" class="template">Parte HU</a>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
